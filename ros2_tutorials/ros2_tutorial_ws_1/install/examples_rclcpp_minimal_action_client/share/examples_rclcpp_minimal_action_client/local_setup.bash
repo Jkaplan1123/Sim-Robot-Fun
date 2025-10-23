@@ -1,1 +1,0 @@
-/home/jack/Documents/Sim-Robot-Fun/ros2_tutorials/ros2_tutorial_ws/build/examples_rclcpp_minimal_action_client/ament_cmake_environment_hooks/local_setup.bash
