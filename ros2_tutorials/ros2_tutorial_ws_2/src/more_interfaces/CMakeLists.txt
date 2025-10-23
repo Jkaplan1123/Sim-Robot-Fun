@@ -15,6 +15,17 @@ find_package(rosidl_default_generators REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# 2.1 - Build an msg file
+set(msg_files
+  "msg/AddressBook.msg"
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+)
+
+ament_export_dependencies(rosidl_default_runtime)
+
 # 3.2 - Build the Publisher
 find_package(rclcpp REQUIRED)
 
@@ -32,16 +43,7 @@ rosidl_get_typesupport_target(cpp_typesupport_target
 target_link_libraries(publish_address_book "${cpp_typesupport_target}")
 
 
-# 2.1 - Build an msg file
-set(msg_files
-  "msg/AddressBook.msg"
-)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
-)
-
-ament_export_dependencies(rosidl_default_runtime)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

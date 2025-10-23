@@ -1,0 +1,2 @@
+string messages
+uint8 counter

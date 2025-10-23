@@ -15,11 +15,14 @@ setup(
     zip_safe=True,
     maintainer='jack',
     maintainer_email='jack.m.kaplan@gmail.com',
-    description='TODO: Package description',
+    description='Publisher to Middleman to Subscriber',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'publisher = py_middleman.middleman_publisher_node:main',
+            'middleman = py_middleman.middleman_republisher_node:main',
+            'subscriber = py_middleman.middleman_subscriber_node:main',
         ],
     },
 )
