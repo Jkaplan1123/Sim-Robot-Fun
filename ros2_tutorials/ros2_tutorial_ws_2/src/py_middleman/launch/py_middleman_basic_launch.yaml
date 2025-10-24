@@ -1,0 +1,38 @@
+%YAML 1.2
+---
+launch:
+  - node:
+      pkg: "py_middleman"
+      exec: "publisher"
+      name: "talker"
+      namespace: "redirect"
+
+  - node:
+      pkg: "py_middleman"
+      exec: "middleman"
+      name: "republisher"
+      namespace: "redirect"
+
+  - node:
+      pkg: "py_middleman"
+      exec: "subscriber"
+      name: "listener"
+      namespace: "redirect"
+      
+#   - node:
+#       pkg: "py_middleman"
+#       exec: "publisher"
+#       name: "talker"
+#       namespace: "alt"
+
+#   - node:
+#       pkg: "py_middleman"
+#       exec: "middleman"
+#       name: "republisher"
+#       namespace: "alt"
+
+#   - node:
+#       pkg: "py_middleman"
+#       exec: "subscriber"
+#       name: "listener"
+#       namespace: "alt"
